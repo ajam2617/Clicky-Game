@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import NavTabs from "./components/NavTabs";
 import GameContainer from "./components/GameContainer";
-import cards from "./cards.json"
-import Wrapper from "./components/Wrapper/index";
-import Title from "./components/Title/index";
+import cards from "./cards.js";
+// import Wrapper from "./components/Wrapper/index";
+// import Title from "./components/Title/index";
 import SpaceCard from './components/Cards';
 
 class App extends Component {
@@ -13,16 +13,18 @@ class App extends Component {
   };
   render() {
     return (
-      <Wrapper>
-        <Title>Image Shuffle</Title>
-        {this.state.cards.map(cards => (
+      <div className="container-fluid">
+        <h1>Image Shuffle</h1>
+
+        {this.state.cards.map(card => (
           <SpaceCard
-            id={cards.id}
-            image={cards.image}
-            name={cards.name}
+            id={card.id}
+            image={card.image}
+            name={card.name}
+            key={card.id}
           />
         ))}
-      </Wrapper>
+      </div>
     );
   }
 }

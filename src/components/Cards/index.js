@@ -1,12 +1,14 @@
 import React from "react";
 
-function SpaceCard(props) {
+function SpaceCard(cards) {
+  console.log(cards);
   return (
-    <div className="card">
+   
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={cards.name} src={cards.image} />
+
       </div>
-    </div>
+    
   );
 }
 

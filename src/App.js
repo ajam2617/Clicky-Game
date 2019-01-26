@@ -12,9 +12,6 @@ class App extends Component {
     cards
   };
   render() {
-
-  }
-  render() {
     return (
       <Wrapper>
         <Title>Image Shuffle</Title>
@@ -22,6 +19,7 @@ class App extends Component {
           <SpaceCard
             id={cards.id}
             image={cards.image}
+            name={cards.name}
           />
         ))}
       </Wrapper>

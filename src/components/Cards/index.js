@@ -1,16 +1,12 @@
 import React from "react";
 
-function SpaceCard(cards) {
-  console.log(cards);
-  return (
-   
-      <div className="img-container">
-        <img alt={cards.name} src={cards.image} />
+const SpaceCard = cards => (
 
-      </div>
-    
-  );
-}
+  <div className="card" onClick={() => cards.click(cards.id)} >
+  <img alt={cards.name} src={cards.image} />
+</div>
 
 
+
+)
 export default SpaceCard;

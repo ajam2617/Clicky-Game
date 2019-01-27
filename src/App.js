@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import Title from "./components/Title/index.js";
-import GameContainer from "./components/GameContainer";
 import cards from "./cards.js";
 import SpaceCard from './components/Cards';
+import Score from "./components/Score/index.js";
 
 class App extends Component {
+  //listening for change of state for these properties
   state = {
     cards,
     clickedId: [],
     highScore: 0,
     score: 0,
-
+    status: ""
   };
 
   //shuffle cards when clicked
@@ -19,13 +20,13 @@ class App extends Component {
     let clickedId = this.state.clickedId;
 
     if(clickedId.includes(id)) {
-      this.setState({clickedId: [], score: 0, status: "Game Over! You lost!" });
+      this.setState({clickedId: [], highScore: this.state.score, score: 0, status: "Game Over! You lost!" });
     }
     else {
       clickedId.push(id)
 
       if(clickedId.length ===12) {
-        this.setState({score: 12, status:"You Won!", clickedId:[]})
+        this.setState({score: 12, highscore: 12, status:"You Won!", clickedId:[]})
       }
       this.setState({cards, clickedId, score: clickedId.length});
 
@@ -38,16 +39,23 @@ class App extends Component {
   //
   render() {
     return (
-      <div className="wrapper">
+      <div>
+      <div className="header">
         <Title />
+        <Score  total = {this.state.score}
+                status = {this.state.status}/>
+        </div>
+        <div className="wrapper container">
         {this.state.cards.map(card => (
           <SpaceCard
+            shuffleCards={this.shuffleCards}
             id={card.id}
             image={card.image}
             name={card.name}
             key={card.id}
           />
         ))}
+        </div>
       </div>
     );
   }

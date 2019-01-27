@@ -3,11 +3,11 @@ import planet2 from "./images/planet2.JPG";
 import planet3 from "./images/planet3.JPG";
 import planet4 from "./images/planet4.JPG";
 import spaceship1 from "./images/spaceship1.JPG";
+import spaceship2 from "./images/spaceship2.JPG";
 import spaceship3 from "./images/spaceship3.JPG";
+import spaceship4 from "./images/spaceship4.JPG";
 import spaceship5 from "./images/spaceship5.JPG";
 import spaceship6 from "./images/spaceship6.JPG";
-import spaceship7 from "./images/spaceship7.JPG";
-import spaceship8 from "./images/spaceship8.JPG";
 
 
 const appData = [
@@ -37,9 +37,19 @@ const appData = [
         id: 5
     },
     {
+        image: spaceship2,
+        name: "spaceship2",
+        id: 6
+    },
+    {
         image: spaceship3,
         name: "spaceship3",
         id: 7
+    },
+    {
+        image: spaceship4,
+        name: "spaceship4",
+        id: 8
     },
     {
         image: spaceship5,
@@ -50,16 +60,6 @@ const appData = [
         image: spaceship6,
         name: "spaceship6",
         id: 10
-    },
-    {
-        image: spaceship7,
-        name: "spaceship7",
-        id: 11
-    },
-    {
-        image: spaceship8,
-        name: "spaceship8",
-        id: 12
     }
 ]
 

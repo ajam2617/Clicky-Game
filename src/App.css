@@ -15,6 +15,18 @@ li {
   padding: 5px 5px 2px 20px;
 }
 
+.itemLeft {
+  width: 35%;
+}
+
+.itemCenter {
+  width: 35%;
+}
+
+.itemRight {
+  width: 15%;
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;

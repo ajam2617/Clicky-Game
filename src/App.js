@@ -20,10 +20,11 @@ class App extends Component {
     let clickedId = this.state.clickedId;
 
     if(clickedId.includes(id)) {
-      this.setState({clickedId: [], highScore: this.state.score, score: 0, status: "Game Over! You lost!" });
+      this.setState({clickedId: [], highScore: clickedId.length, score: 0, status: "Game Over! You lost!" });
     }
     else {
       clickedId.push(id)
+      this.setState({status: ""})
 
       if(clickedId.length ===12) {
         this.setState({score: 12, highscore: 12, status:"You Won!", clickedId:[]})

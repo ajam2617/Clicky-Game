@@ -20,15 +20,16 @@ class App extends Component {
     let clickedId = this.state.clickedId;
 
     if(clickedId.includes(id)) {
-      this.setState({clickedId: [], highScore: this.state.score, score: 0, status: "Game Over! You lost!" });
+      this.setState({clickedId: [], highScore: this.state.score, score: 0, status: "Game Over! Click again to play!" });
     }
     else {
       clickedId.push(id)
+      this.setState({status:"Correct! Keep guessing..."})
 
       if(clickedId.length ===12) {
         this.setState({score: 12, highscore: 12, status:"You Won!", clickedId:[]})
       }
-      this.setState({cards, clickedId, score: clickedId.length});
+      this.setState({cards, clickedId, score: clickedId.length, status:"Great! Keep guessing!"});
 
       for(let i = cards.length -1; i>0; i--) {
         let j = Math.floor(Math.random() * (i + 1));

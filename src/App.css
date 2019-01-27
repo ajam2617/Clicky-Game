@@ -2,16 +2,6 @@ body {
   background-color: purple;
 }
 
-.img-container {
-  width: 480px;
-}
-
-.card img{
-  width: 160px;
-  height: 170px;
-  margin-right: 50px;
-  margin-left: 50px;
-}
 .App {
   text-align: center;
 }
@@ -23,6 +13,13 @@ body {
 li {
   display: inline-block;
   padding: 5px 5px 2px 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  overflow: auto;
 }
 
 

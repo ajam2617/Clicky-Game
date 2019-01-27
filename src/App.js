@@ -38,7 +38,7 @@ class App extends Component {
   //
   render() {
     return (
-      <div className="container-fluid">
+      <div className="wrapper">
         <Title />
         {this.state.cards.map(card => (
           <SpaceCard

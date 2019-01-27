@@ -1,26 +1,19 @@
 .card {
-    background: #fff;
     border-radius: 2px;
-    height: 325px;
     margin: 1rem;
     position: relative;
-    width: 325px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
   }
 
   .card > .img-container {
-    height: 60%;
-    overflow: hidden;
+    height: auto;
+    width: auto;
     text-align: center;
     background:#6CADDC;
-  }
-  .card > .img-container > img {
-    width: 60%
+    zoom: 1.2;
   }
   
-  .card > .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 15px;
+  div .card {
+      width: 180px;
+      height: 170px;
   }

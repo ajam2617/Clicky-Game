@@ -1,7 +1,7 @@
 import React from "react";
 
 const Score = props => (
-    <div className="container-fluid">
+    <div className="scoreDiv">
         <ul className = "nav nav-pills nav justified">
       <li className="itemLeft">
       Click on a tile to earn points, but only click once!

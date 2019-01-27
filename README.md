@@ -1,7 +1,7 @@
 # :rocket: Galaxy Memory Game :rocket:
 A memory game with React, which breaks application's UI into components, manages component state, and responds to user events. Images are generated on page load. Each image listens for a click event. App keeps track of user's score, high score, and resets when an image has been clicked more than once. Every time an image is clicked, the images rerender in a random order. [DeployedApp](http://ajam2617.github.io/Clicky-Game)
 
-# nut_and_bolt Resources nut_and_bolt
+# :nut_and_bolt Resources :nut_and_bolt
 * React
 * Bootstrap
 * CSS
@@ -16,10 +16,11 @@ I also had an issues with tracking the high score. The high score would not rend
 This was the first time trying to deploy a React app to GitHub pages. That was a bit tricky, but I was able to complete this task also!
 
 _Code before the cleanup_
-[Mess](/src/images/messy.JPG);
+<img src="/src/images/messy.JPG">
 
 _Code after cleanup_
-[Clean](/src/images/clear.JPG);
+<img src= "/src/images/clean.JPG">
+
 
 
 

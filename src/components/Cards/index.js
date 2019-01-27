@@ -2,8 +2,10 @@ import React from "react";
 
 const SpaceCard = cards => (
 
-  <div className="card" onClick={() => cards.click(cards.id)} >
+  <div className="card">
+  <div className="img-container">
   <img alt={cards.name} src={cards.image} />
+  </div>
 </div>
 
 

@@ -3,8 +3,6 @@ import './App.css';
 import Title from "./components/Title/index.js";
 import GameContainer from "./components/GameContainer";
 import cards from "./cards.js";
-// import Wrapper from "./components/Wrapper/index";
-// import Title from "./components/Title/index";
 import SpaceCard from './components/Cards';
 
 class App extends Component {

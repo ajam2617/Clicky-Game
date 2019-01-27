@@ -20,7 +20,7 @@ class App extends Component {
     this.setState({cards: this.shuffleArr(this.state.cards)})
   };
 
-  //shuffle cards when clicked
+  //shuffle cards with for loop
   shuffleArr = cards => {
     for(let i = cards.length -1; i>0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -28,7 +28,8 @@ class App extends Component {
     }
     return cards;
   }
-
+  //added a function to handle highscore.
+  //I believe this was working the whole time, but I was not passing the high score in JSX
    highScoreTrack = () => {
 
     if(this.state.score > this.state.highScore) {
@@ -36,10 +37,12 @@ class App extends Component {
     }
   }
 
+  //pass ID to check if it's ben clicked before, handles resetting the messages to user  
     clickTrack = id => {
 
       let clickedId = this.state.clickedId;
 
+      //id is included if already clicked
       if(clickedId.includes(id)) {
 
         this.highScoreTrack();
@@ -47,10 +50,11 @@ class App extends Component {
         this.setState({clickedId: [], score: 0, status: "You clicked the same tile twice! Click again to replay!" });
         return
       }
+      //if not clicked, then push to array to track for future. 
       else {
         clickedId.push(id)
         this.setState({cards: this.shuffleArr(this.state.cards), score: this.state.score +1, status:"Correct! Keep guessing..."})
-  
+        //game has 10 images. Max score restarts game
         if(clickedId.length ===10) {
           this.setState({score: 0, highscore: 12, status:"You Won!", clickedId:[]})
         }

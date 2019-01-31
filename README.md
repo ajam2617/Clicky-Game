@@ -1,7 +1,7 @@
 # :rocket: Galaxy Memory Game :rocket:
 A memory game with React, which breaks application's UI into components, manages component state, and responds to user events. Images are generated on page load. Each image listens for a click event. App keeps track of user's score, high score, and resets when an image has been clicked more than once. Every time an image is clicked, the images rerender in a random order. [DeployedApp](http://ajam2617.github.io/Clicky-Game)
 
-<img src="http://recordit.co/0x3EmIIwkT.gif">
+<img src="http://g.recordit.co/0x3EmIIwkT.gif" alt text = "UI Experiencce">
 
 # :nut_and_bolt: Resources :nut_and_bolt:
 * React
